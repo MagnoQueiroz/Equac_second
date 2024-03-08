@@ -7,11 +7,11 @@ void clear_screen()
 {
 
 #ifdef __linux__
-    printf("\nPRESSIONE QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO\n");
+    printf("\nPRESSIONE QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO...[PRESS ENTER]");
     char press = getchar();
     system("clear");
 #elif _WIN32
-    printf("\nPRESSIONE QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO\n");
+    printf("\nPRESSIONE QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO......[PRESS ENTER]");
     char press = getchar();
     system("cls");
 #else
