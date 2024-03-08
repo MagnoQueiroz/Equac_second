@@ -8,12 +8,13 @@ int main()
     float xQua, xNum, num;
     float delta, raiz, xNumPow;
     float xOne, xTwo;
+
     printf("|---------------------------------|\n");
     printf("|          Equação do 2º          |\n");
     printf("|---------------------------------|\n");
     printf("|\t ax² + bx + c = 0         |\n");
     printf("|---------------------------------|\n");
-    do
+
     {
         printf("Digite a: ");
         scanf("%f", &xQua);
@@ -51,7 +52,6 @@ int main()
         xTwo = (-xNum - raiz) / (2 * xQua);
 
         printf("\t -(%.2f) +- √%.2f\n\t___________________\n\t       2×%.0f\n\n", xNum, delta, xQua);
-
         printf("\t -(%.2f) +- %.2f\n\t___________________\n\t         %.0f\n\n", xNum, raiz, (2 * xQua));
 
         printf("x¹: %f\n", xOne);
