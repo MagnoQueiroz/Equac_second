@@ -54,8 +54,8 @@ int main()
         printf("\t -(%.2f) +- √%.2f\n\t___________________\n\t       2×%.0f\n\n", xNum, delta, xQua);
         printf("\t -(%.2f) +- %.2f\n\t___________________\n\t         %.0f\n\n", xNum, raiz, (2 * xQua));
 
-        printf("x¹: %f\n", xOne);
-        printf("x²: %f\n", xTwo);
+        printf("x¹: %.2f\n", xOne);
+        printf("x²: %.2f\n", xTwo);
     }
 
     return (0);
