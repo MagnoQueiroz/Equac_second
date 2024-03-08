@@ -67,35 +67,38 @@ int main()
 
             delta = xNumPow - (4 * (xQua * num));
 
+            printf("\n|--------------------------------------------------------------------|\n");
             printf("\nDELTA:\n");
             printf("Δ = (b)² - 4×a×c\n");
             printf("Δ = (%.0f)² - 4×%.0f×%.0f\n",xNum,xQua,num);
             printf("Δ = (%.0f) - 4×%.0f×%.0f\n", xNumPow, xQua, num);
             printf("Δ = %.0f\n", delta);
-
-            printf("\n------------------------------------------------------------------------\n");
-
+            printf("\n|--------------------------------------------------------------------|\n");
             printf("\nBHASKARA:\n");
             printf("\t   -(b) +- √Δ\n\t_________________\n\t      2×a\n\n");
+
 
             if (delta < 0)
             {
 
                 printf("Não existe raiz quadrada negativa no números raiz\n\n");
                 printf("Logo Não é possível passar deste ponto:\n\n");
-                printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t         %.0f\n\n", xNum, delta, (2 * xQua));
+                printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t         %.0f\n", xNum, delta, (2 * xQua));
+                printf("\n|--------------------------------------------------------------------|\n");
             }
             else
             {
                 raiz = sqrt(delta);
                 xOne = (-xNum + raiz) / (2 * xQua);
                 xTwo = (-xNum - raiz) / (2 * xQua);
-
                 printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t        2×%.0f\n\n", xNum, delta, xQua);
                 printf("\t -(%.2f) +- %.2f\n\t___________________\n\t         %.0f\n\n", xNum, raiz, (2 * xQua));
 
-                printf("x¹: %.2f\n", xOne);
-                printf("x²: %.2f\n", xTwo);
+                printf("\n|--------------------------------------------------------------------|\n");
+                printf("\nRaízes|soluções possiveis\n");
+                printf("\tx¹: %.2f\n", xOne);
+                printf("\tx²: %.2f\n", xTwo);
+                printf("|--------------------------------------------------------------------|\n");
             }
             scanf("%c", &press);
 
