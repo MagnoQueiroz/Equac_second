@@ -36,13 +36,13 @@ int main()
     delta = xNumPow - (4 * (xQua * num));
 
     printf("O delta é: %.0f\n\n", delta);
-    printf("\t  -(b) +- √Δ\n\t_________________\n\t      2×a\n\n");
+    printf("\t   -(b) +- √Δ\n\t_________________\n\t      2×a\n\n");
 
     if (delta < 0)
     {
         printf("Não existe raiz quadrada negativa no números raiz\n\n");
         printf("Logo Não é possível passar deste ponto:\n\n");
-        printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t       %.0f\n\n", xNum, delta, (2 * xQua));
+        printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t         %.0f\n\n", xNum, delta, (2 * xQua));
     }
     else
     {
@@ -50,9 +50,9 @@ int main()
         xOne = (-xNum + raiz) / (2 * xQua);
         xTwo = (-xNum - raiz) / (2 * xQua);
 
-        printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t       2×%.0f\n\n", xNum, delta, xQua);
+        printf("\t -(%.2f) +- √%.2f\n\t___________________\n\t       2×%.0f\n\n", xNum, delta, xQua);
 
-        printf("\t-(%.2f) +- %.2f\n\t___________________\n\t       %.0f\n\n", xNum, raiz, (2 * xQua));
+        printf("\t -(%.2f) +- %.2f\n\t___________________\n\t         %.0f\n\n", xNum, raiz, (2 * xQua));
 
         printf("x¹: %f\n", xOne);
         printf("x²: %f\n", xTwo);
