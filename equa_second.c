@@ -74,7 +74,7 @@ int main()
             printf("Δ = %.0f\n", delta);
 
             printf("\n------------------------------------------------------------------------\n");
-            
+
             printf("\nBHASKARA:\n");
             printf("\t   -(b) +- √Δ\n\t_________________\n\t      2×a\n\n");
 
@@ -91,7 +91,7 @@ int main()
                 xOne = (-xNum + raiz) / (2 * xQua);
                 xTwo = (-xNum - raiz) / (2 * xQua);
 
-                printf("\t -(%.2f) +- √%.2f\n\t___________________\n\t       2×%.0f\n\n", xNum, delta, xQua);
+                printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t        2×%.0f\n\n", xNum, delta, xQua);
                 printf("\t -(%.2f) +- %.2f\n\t___________________\n\t         %.0f\n\n", xNum, raiz, (2 * xQua));
 
                 printf("x¹: %.2f\n", xOne);
