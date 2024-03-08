@@ -5,14 +5,12 @@
 
 void clear_screen()
 {
-
-#ifdef __linux__
-    printf("\nPRESSIONE QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO...[PRESS ENTER]");
+    printf("\n\n[PRESS ENTER] OU QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO...");
     char press = getchar();
+#ifdef __linux__
+
     system("clear");
 #elif _WIN32
-    printf("\nPRESSIONE QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO......[PRESS ENTER]");
-    char press = getchar();
     system("cls");
 #else
 
@@ -69,11 +67,20 @@ int main()
 
             delta = xNumPow - (4 * (xQua * num));
 
-            printf("O delta é: %.0f\n\n", delta);
+            printf("\nDELTA:\n");
+            printf("Δ = (b)² - 4×a×c\n");
+            printf("Δ = (%.0f)² - 4×%.0f×%.0f\n",xNum,xQua,num);
+            printf("Δ = (%.0f) - 4×%.0f×%.0f\n", xNumPow, xQua, num);
+            printf("Δ = %.0f\n", delta);
+
+            printf("\n------------------------------------------------------------------------\n");
+            
+            printf("\nBHASKARA:\n");
             printf("\t   -(b) +- √Δ\n\t_________________\n\t      2×a\n\n");
 
             if (delta < 0)
             {
+
                 printf("Não existe raiz quadrada negativa no números raiz\n\n");
                 printf("Logo Não é possível passar deste ponto:\n\n");
                 printf("\t-(%.2f) +- √%.2f\n\t___________________\n\t         %.0f\n\n", xNum, delta, (2 * xQua));
@@ -104,7 +111,9 @@ int main()
         }
         else
         {
-            printf("Valor invalido, tente novamente\n");
+            printf("Valor invalido. TENTE DE NOVO!!\n" );
+            scanf("%c", &press);
+            clear_screen();
         }
     }
 
