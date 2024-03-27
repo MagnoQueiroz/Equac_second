@@ -27,9 +27,9 @@ int main() {
 
     while (repeat == 1) {
         char press;
-        printf("\n\t|-----------------------|");
-        printf("\n\t|\tBEM-VINDO !!\t|\n");
-        printf("\t|-----------------------|\n\n");
+        printf("\n\t|-------------------------|");
+        printf("\n\t|   \tBEM-VINDO !!\t  |\n");
+        printf("\t|-------------------------|\n\n");
         printf("Calculadora de equação do 2º\n");
         printf("Digite:\n1- para iniciar programa\n2-para sair do programa\n");
         printf("Escolha: ");
