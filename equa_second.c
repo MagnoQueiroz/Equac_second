@@ -17,7 +17,9 @@ void clear_screen() {
 }
 
 float calcdelta(float xqua, float xNumPow, float num);
+
 float * calcbask(float raiz, float xqua, float xnum);
+
 void processEquaAndWrite(float xqua, float xnum, float num);
 
 int main() {
