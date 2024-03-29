@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <locale.h>
 #include <math.h>
+
+#ifdef __linux
 #include <stdlib.h>
+#elif _WIN32
+#include <windows.h>
+#else
+#endif
 
 void clear_screen() {
     printf("\n\n[PRESS ENTER] OU QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO...");
@@ -41,7 +47,7 @@ int main() {
             printf("|---------------------------------|\n");
             printf("|          Equação do 2º          |\n");
             printf("|---------------------------------|\n");
-            printf("|\t ax² + bx + c = 0         |\n");
+            printf("|\t  ax² + bx + c = 0        |\n");
             printf("|---------------------------------|\n");
 
             do {
@@ -134,6 +140,4 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("\t\tX²: %.2f\n", raizesBask[1]);
         printf("|--------------------------------------------------------------------|\n");
     }
-
-
 }
