@@ -35,16 +35,15 @@ int main() {
 
     while (repeat == 1) {
         char press;
-//        printf("\n|--------------------------------------------------------|");
         printf("\n|────────────────────────────────────────────────────────|");
         printf("\n|\t\t\tBEM-VINDO !!\t\t\t |");
         printf("\n|────────────────────────────────────────────────────────|\n");
         printf("|\t\tCalculadora de equação do 2º\t\t |");
         printf("\n|--------------------------------------------------------|\n");
-        printf("| 1- Para iniciar programa | 2- Para sair do programa\t |\n");
-        printf("|--------------------------------------------------------|\n");
+        printf("| 1- Para iniciar programa | 2- Para sair do programa\t |");
+        printf("\n|--------------------------------------------------------|\n");
 
-        printf("| → Escolha: ");
+        printf(" → Escolha: ");
         scanf("%d", &repeat);
 
         if (repeat == 1) {
@@ -126,15 +125,20 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
     printf("|\t\t\t\t\tΔ = (%.0f)² - 4×%.0f×%.0f\t\t\t\t|\n", xnum, xqua, num);
     if (xNumPow >= 100) {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
-    } else if (xNumPow == 0 || xqua == 0 || num == 0) {
+    }
+    else if (xNumPow == 0 || xqua == 0 || num == 0) {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t\t|\n", xNumPow, xqua, num);
-    } else {
+    }
+    else {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
     }
     if (delta <= -10) {
         printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);
 
-    } else { printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta); }
+    }
+    else {
+        printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);
+    }
     printf("|\t\t\t\t\t\t\t\t\t\t\t|");
 
     printf("\n|---------------------------------------------------------------------------------------|\n");
@@ -143,7 +147,6 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
     printf("|\t\t\t\t\t\t\t\t\t\t\t|");
     printf("\n|\t\t\t\t\t-(b) +- √Δ\t\t\t\t\t|\n|\t\t\t\t_____________________________\t\t\t\t|\n|\t\t\t\t\t    2×a\t\t\t\t\t\t|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
-
 
     if (delta < 0) {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
@@ -156,7 +159,8 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|");
 
         printf("\n|---------------------------------------------------------------------------------------|\n");
-    } else {
+    }
+    else {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
         printf("|\t\t\t\t   -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t  2×%.0f\t\t\t\t\t\t|\n",
                xnum, delta, xqua);
@@ -169,10 +173,10 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("\n|---------------------------------------------------------------------------------------|");
 
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|\n");
-        if(raizesBask[0] == 0 && raizesBask[1] == 00) {
-            printf("|\t\t\t\t\tX¹ e x²: %.2f\t\t\t\t\t|", raizesBask[0]);
-
-        }else {
+        if (raizesBask[0] == 0 && raizesBask[1] == 00) {
+            printf("|\t\t\t\t\tX¹X²: %.2f\t\t\t\t\t|", raizesBask[0]);
+        }
+        else {
             printf("|\t\t\t\t\tX¹: %.2f\t\t\t\t\t|\n", raizesBask[0]);
             printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
         }
