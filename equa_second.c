@@ -3,6 +3,7 @@
 #include <math.h>
 
 #ifdef __linux__
+
 #include <stdlib.h>
 
 #elif _WIN32
@@ -17,7 +18,7 @@ void clear_screen() {
     system("clear");
 #elif _WIN32
     system("cls");
-    #else
+#else
 #endif
 }
 
@@ -34,27 +35,28 @@ int main() {
 
     while (repeat == 1) {
         char press;
-        printf("\n|--------------------------------------------------------|");
+//        printf("\n|--------------------------------------------------------|");
+        printf("\n|────────────────────────────────────────────────────────|");
         printf("\n|\t\t\tBEM-VINDO !!\t\t\t |");
-        printf("\n|--------------------------------------------------------|\n");
+        printf("\n|────────────────────────────────────────────────────────|\n");
         printf("|\t\tCalculadora de equação do 2º\t\t |");
         printf("\n|--------------------------------------------------------|\n");
-        printf("| 1 -Para iniciar programa | 2 -Para sair do programa\t |\n");
+        printf("| 1- Para iniciar programa | 2- Para sair do programa\t |\n");
         printf("|--------------------------------------------------------|\n");
 
-        printf("|→ Escolha: ");
+        printf("| → Escolha: ");
         scanf("%d", &repeat);
 
         if (repeat == 1) {
 
-            printf("|---------------------------------|\n");
+            printf("\n|---------------------------------|\n");
             printf("|          Equação do 2º          |\n");
             printf("|---------------------------------|\n");
             printf("|\t ax² + bx + c = 0\t  |\n");
             printf("|---------------------------------|\n");
 
             do {
-                printf("Digite a: ");
+                printf(" Digite a: ");
                 scanf("%f", &xQua);
 
                 if (xQua == 0) {
@@ -63,10 +65,10 @@ int main() {
 
             } while (xQua == 0);
 
-            printf("Digite b: ");
+            printf(" Digite b: ");
             scanf("%f", &xNum);
 
-            printf("Digite c: ");
+            printf(" Digite c: ");
             scanf("%f", &num);
 
             processEquaAndWrite(xQua, xNum, num);
@@ -80,7 +82,8 @@ int main() {
 
             repeat = 0;
         } else {
-            printf("Valor invalido. TENTE DE NOVO!!\n");
+            printf("\n\n\t\tVALOR INVALIDO. TENTE DE NOVO!!\n");
+            repeat = 1;
             scanf("%c", &press);
             clear_screen();
         }
@@ -114,8 +117,7 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
     raiz = sqrt(delta);
 
     raizesBask = calcbask(raiz, xqua, xnum);
-
-    printf("\n|---------------------------------------------------------------------------------------|\n");
+    printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
     printf("|\t\t\t\t\tΔ DELTA:\t\t\t\t\t|");
     printf("\n|---------------------------------------------------------------------------------------|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
@@ -124,17 +126,15 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
     printf("|\t\t\t\t\tΔ = (%.0f)² - 4×%.0f×%.0f\t\t\t\t|\n", xnum, xqua, num);
     if (xNumPow >= 100) {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
-    }
-    else if(xNumPow == 0||xqua==0 || num==0){
+    } else if (xNumPow == 0 || xqua == 0 || num == 0) {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t\t|\n", xNumPow, xqua, num);
-    }
-    else {
+    } else {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
     }
     if (delta <= -10) {
         printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);
 
-    }else{ printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);}
+    } else { printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta); }
     printf("|\t\t\t\t\t\t\t\t\t\t\t|");
 
     printf("\n|---------------------------------------------------------------------------------------|\n");
@@ -151,25 +151,33 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
         printf("|→ Logo Não é possível passar deste ponto:\t\t\t\t\t\t|");
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
-        printf("\n|\t\t\t\t    -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t________________________________\t\t\t|\n|\t\t\t\t\t     %.0f\t\t\t\t\t\t|\n", xnum, delta, (2 * xqua));
+        printf("\n|\t\t\t\t    -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t________________________________\t\t\t|\n|\t\t\t\t\t     %.0f\t\t\t\t\t\t|\n",
+               xnum, delta, (2 * xqua));
         printf("|\t\t\t\t\t\t\t\t\t\t\t|");
 
         printf("\n|---------------------------------------------------------------------------------------|\n");
-    }
-    else {
+    } else {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
-        printf("|\t\t\t\t   -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t  2×%.0f\t\t\t\t\t\t|\n", xnum, delta, xqua);
+        printf("|\t\t\t\t   -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t  2×%.0f\t\t\t\t\t\t|\n",
+               xnum, delta, xqua);
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
-        printf("|\t\t\t\t    -(%.2f) +- %.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t    %.0f\t\t\t\t\t\t|", xnum, raiz, (2 * xqua));
+        printf("|\t\t\t\t    -(%.2f) +- %.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t    %.0f\t\t\t\t\t\t|",
+               xnum, raiz, (2 * xqua));
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
         printf("\n|---------------------------------------------------------------------------------------|\n");
         printf("|\t\t\t\tRaízes|soluções possíveis:\t\t\t\t|");
         printf("\n|---------------------------------------------------------------------------------------|");
 
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|\n");
-        printf("|\t\t\t\t\tX¹: %.2f\t\t\t\t\t|\n", raizesBask[0]);
-        printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
-        printf("\n|---------------------------------------------------------------------------------------|\n");
+        if(raizesBask[0] == 0 && raizesBask[1] == 00) {
+            printf("|\t\t\t\t\tX¹ e x²: %.2f\t\t\t\t\t|", raizesBask[0]);
+
+        }else {
+            printf("|\t\t\t\t\tX¹: %.2f\t\t\t\t\t|\n", raizesBask[0]);
+            printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
+        }
+        printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
+        printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
     }
 
 }
