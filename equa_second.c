@@ -3,7 +3,9 @@
 #include <math.h>
 
 #ifdef __linux
+
 #include <stdlib.h>
+
 #elif _WIN32
 #include <windows.h>
 #else
@@ -24,7 +26,7 @@ void clear_screen() {
 
 float calcdelta(float xqua, float xNumPow, float num);
 
-float * calcbask(float raiz, float xqua, float xnum);
+float *calcbask(float raiz, float xqua, float xnum);
 
 void processEquaAndWrite(float xqua, float xnum, float num);
 
@@ -39,7 +41,7 @@ int main() {
         printf("\n\t|   \tBEM-VINDO !!\t  |\n");
         printf("\t|-------------------------|\n\n");
         printf("Calculadora de equação do 2º\n");
-        printf("Digite:\n1- para iniciar programa\n2-para sair do programa\n");
+        printf("1 - Para iniciar programa || 2 - Para sair do programa\n");
         printf("Escolha: ");
         scanf("%d", &repeat);
         if (repeat == 1) {
@@ -47,7 +49,7 @@ int main() {
             printf("|---------------------------------|\n");
             printf("|          Equação do 2º          |\n");
             printf("|---------------------------------|\n");
-            printf("|\t  ax² + bx + c = 0        |\n");
+            printf("|\t ax² + bx + c = 0         |\n");
             printf("|---------------------------------|\n");
 
             do {
@@ -91,7 +93,7 @@ float calcdelta(float xqua, float xNumPow, float num) {
     return (delta);
 }
 
-float * calcbask(float raiz, float xqua, float xnum) {
+float *calcbask(float raiz, float xqua, float xnum) {
     float xOne, xTwo;
     static float vetorValores[2];
 
@@ -106,7 +108,7 @@ float * calcbask(float raiz, float xqua, float xnum) {
 void processEquaAndWrite(float xqua, float xnum, float num) {
     float raiz, xNumPow = pow(xnum, 2);
     float delta;
-    float * raizesBask;
+    float *raizesBask;
     delta = calcdelta(xqua, xNumPow, num);
     raiz = sqrt(delta);
 
@@ -140,4 +142,5 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("\t\tX²: %.2f\n", raizesBask[1]);
         printf("|--------------------------------------------------------------------|\n");
     }
+
 }
