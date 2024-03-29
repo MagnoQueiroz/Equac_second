@@ -75,7 +75,7 @@ int main() {
             scanf("%c", &press);
             clear_screen();
         } else if (repeat == 2) {
-            printf("\nSAINDO...\n\n");
+            printf("\n\t\tENCERRANDO O PROGRAMA...\n\n");
             scanf("%c", &press);
             clear_screen();
 

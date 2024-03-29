@@ -8,3 +8,6 @@
 
 ## Como usar:
 - Para poder executar o script, você terá que usar o parametro -lm na hora da compilação.
+```
+    ggc -o nomearquivocompilar nomedoarquivo.c -lm
+ ```  
