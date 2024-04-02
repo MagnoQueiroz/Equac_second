@@ -6,7 +6,7 @@
 ## Como funciona:
 - O usuário digita quais sao os números presentes na operação. Em seguida ele realiza o cálculo, imprimindo em tela o resultado.
 
-## Como usar:
+## Como compilar:
 - Para poder executar o script, você terá que usar o parametro -lm na hora da compilação.
 ```
     ggc -o nomearquivocompilar nomedoarquivo.c -lm
