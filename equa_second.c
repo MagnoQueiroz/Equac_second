@@ -74,8 +74,18 @@ int main() {
 
             scanf("%c", &press);
             clear_screen();
-        } else if (answer == 'n' || answer == 'N') {
-            printf("\n\t\tENCERRANDO O PROGRAMA...\n\n");
+        }
+        else if (answer == 'n' || answer == 'N') {
+            printf("\n|────────────────────────────────────────────────────────|");
+            printf("\n|\t\t   PROGRAMA ENCERRADO...\t\t |\n");
+            printf("|\t\t\t\t\t\t\t |");
+
+            printf("\n|--------------------------------------------------------|\n");
+            printf("|\t\t  developed by Synxther ©\t\t |\n");
+            printf("|\t GITHUB:https://github.com/MagnoQueiroz\t\t |");
+            printf("\n|────────────────────────────────────────────────────────|");
+
+
             scanf("%c", &press);
             clear_screen();
 
@@ -179,6 +189,10 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         }
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
         printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
+        printf("|\t\t\t\t   developed by Synxther ©\t\t\t\t|\n");
+        printf("|\t\t\t    GITHUB:https://github.com/MagnoQueiroz\t\t\t|");
+        printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
+
     }
 
 }
