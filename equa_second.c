@@ -31,7 +31,7 @@ void processEquaAndWrite(float xqua, float xnum, float num);
 int main() {
     setlocale(LC_ALL, "portuguese");
     int repeat = 0;
-    char answer;
+    char answer[3];
     float xQua, xNum, num;
 
     while (repeat == 0) {
@@ -41,13 +41,14 @@ int main() {
         printf("\n|────────────────────────────────────────────────────────|\n");
         printf("|\t\tCalculadora de equação do 2º\t\t |");
         printf("\n|--------------------------------------------------------|\n");
-        printf("|\tPRESS: [S|s] Para iniciar | [N|n] Para sair\t |");
+        printf("|\tPRESS: [S|s] Para iniciar  [N|n] Para sair\t |");
         printf("\n|--------------------------------------------------------|\n");
 
         printf("PRESS: ");
-        scanf("%c", &answer);
+//        scanf("%c", &answer);
+        gets(answer);
 
-        if (answer == 'S' || answer == 's') {
+        if ((*answer == 'S') || (*answer == 's')) {
             printf("\n|---------------------------------|\n");
             printf("|          Equação do 2º          |\n");
             printf("|---------------------------------|\n");
@@ -75,7 +76,7 @@ int main() {
             scanf("%c", &press);
             clear_screen();
         }
-        else if (answer == 'n' || answer == 'N') {
+        else if ((*answer == 'n') || (*answer == 'N')) {
             printf("\n|────────────────────────────────────────────────────────|");
             printf("\n|\t\t   PROGRAMA ENCERRADO...\t\t |\n");
             printf("|\t\t\t\t\t\t\t |");
