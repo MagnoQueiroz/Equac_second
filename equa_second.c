@@ -46,7 +46,7 @@ int main() {
 
         printf("PRESS: ");
 //        scanf("%c", &answer);
-        gets(answer);
+        fgets(answer,2,stdin );
 
         if ((*answer == 'S') || (*answer == 's')) {
             printf("\n|---------------------------------|\n");
@@ -140,7 +140,7 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t\t|\n", xNumPow, xqua, num);
     }
     else {
-        printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t\t|\n", xNumPow, xqua, num);
+        printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
     }
     if (delta <= -10) {
         printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);
