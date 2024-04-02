@@ -11,3 +11,10 @@
 ```
     ggc -o nomearquivocompilar nomedoarquivo.c -lm
  ```  
+<div align="center">
+
+<img alt="Image" height="400" src="./images/imgTwo.png" width="600"/>
+
+<img alt="image" height="400" src="./images/imgOne.png" width="600"/>
+</div>
+

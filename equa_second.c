@@ -82,7 +82,7 @@ int main() {
             printf("|\t\t\t\t\t\t\t |");
 
             printf("\n|--------------------------------------------------------|\n");
-            printf("|\t\t  developed by Synxther ©\t\t |\n");
+            printf("|\t\t  developed by Synxther©\t\t |\n");
             printf("|\t GITHUB:https://github.com/MagnoQueiroz\t\t |");
             printf("\n|────────────────────────────────────────────────────────|");
 
@@ -190,7 +190,7 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         }
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
         printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
-        printf("|\t\t\t\t   developed by Synxther ©\t\t\t\t|\n");
+        printf("|\t\t\t\t   developed by Synxther©\t\t\t\t|\n");
         printf("|\t\t\t    GITHUB:https://github.com/MagnoQueiroz\t\t\t|");
         printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
 
