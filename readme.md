@@ -11,6 +11,7 @@
 ```
     ggc -o nomearquivocompilar nomedoarquivo.c -lm
  ```  
+## Imagens:
 <div align="center">
 
 <img alt="Image" height="400" src="./images/imgTwo.png" width="600"/>
