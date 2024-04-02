@@ -22,11 +22,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="753dfa4c-b5cb-40d1-b221-87ba8a9fa9aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/equa_second.c" beforeDir="false" afterPath="$PROJECT_DIR$/equa_second.c" afterDir="false" />
-    </list>
+    <list default="true" id="753dfa4c-b5cb-40d1-b221-87ba8a9fa9aa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +140,7 @@
       <workItem from="1711990917035" duration="1072000" />
       <workItem from="1712003890559" duration="175000" />
       <workItem from="1712076775127" duration="30000" />
-      <workItem from="1712076813343" duration="2000" />
+      <workItem from="1712076813343" duration="754000" />
     </task>
     <servers />
   </component>

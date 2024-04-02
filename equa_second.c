@@ -41,10 +41,10 @@ int main() {
         printf("\n|────────────────────────────────────────────────────────|\n");
         printf("|\t\tCalculadora de equação do 2º\t\t |");
         printf("\n|--------------------------------------------------------|\n");
-        printf("| [S|s] Para iniciar programa | [N|n] Para sair do programa\t |");
+        printf("|\tPRESS: [S|s] Para iniciar | [N|n] Para sair\t |");
         printf("\n|--------------------------------------------------------|\n");
 
-        printf("ESCOLHA: ");
+        printf("PRESS: ");
         scanf("%c", &answer);
 
         if (answer == 'S' || answer == 's') {
