@@ -11,8 +11,9 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Project" targetName="libm" />
-      <config projectName="Project" targetName="equac_segund" />
+      <config projectName="equac_segund" targetName="libm" />
+      <config projectName="equac_segund" targetName="equa_second" />
+      <config projectName="equac_segund" targetName="equac_segund" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -22,7 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="753dfa4c-b5cb-40d1-b221-87ba8a9fa9aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/equa_second.c" beforeDir="false" afterPath="$PROJECT_DIR$/equa_second.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,33 +55,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "C/C++ File.equa_second.c.executor": "Run",
-    "C/C++ File.test.c.executor": "Run",
-    "CMake Application.equa_second.executor": "Run",
-    "CMake Application.equa_segund.executor": "Run",
-    "CMake Application.equac_segund.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/synxther/utils_jetbrains/IntelliJ.Portuguese.Brazil.Dictionary-master/portuguese-brazil_without-accents.dic",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "language.cpp.clang-tidy",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;C/C++ File.equa_second.c.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.test.c.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.equa_second.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.equa_segund.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.equac_segund.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/synxther/utils_jetbrains/IntelliJ.Portuguese.Brazil.Dictionary-master/portuguese-brazil_without-accents.dic&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="CMake Application.equa_second">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="true" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="equa_second" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="equac_segund" TARGET_NAME="equa_second" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="equac_segund" RUN_TARGET_NAME="equac_segund">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -97,6 +104,10 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="C/C++ File.equa_second.c" />
+      <item itemvalue="CMake Application.equa_second" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="C/C++ File.equa_second.c" />
@@ -126,6 +137,14 @@
       <workItem from="1711670522273" duration="930000" />
       <workItem from="1711679095382" duration="13240000" />
       <workItem from="1711749590161" duration="227000" />
+      <workItem from="1711749846087" duration="729000" />
+      <workItem from="1711979903347" duration="243000" />
+      <workItem from="1711981181837" duration="80000" />
+      <workItem from="1711981271816" duration="346000" />
+      <workItem from="1711990917035" duration="1072000" />
+      <workItem from="1712003890559" duration="175000" />
+      <workItem from="1712076775127" duration="30000" />
+      <workItem from="1712076813343" duration="2000" />
     </task>
     <servers />
   </component>
