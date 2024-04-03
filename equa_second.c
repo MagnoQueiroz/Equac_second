@@ -77,19 +77,15 @@ int main() {
             clear_screen();
         }
         else if ((*answer == 'n') || (*answer == 'N')) {
+            scanf("%c", &press);
+            clear_screen();
             printf("\n|────────────────────────────────────────────────────────|");
             printf("\n|\t\t   PROGRAMA ENCERRADO...\t\t |\n");
             printf("|\t\t\t\t\t\t\t |");
-
             printf("\n|--------------------------------------------------------|\n");
             printf("|\t\t  developed by Synxther©\t\t |\n");
             printf("|\t GITHUB:https://github.com/MagnoQueiroz\t\t |");
             printf("\n|────────────────────────────────────────────────────────|");
-
-
-            scanf("%c", &press);
-            clear_screen();
-
             repeat = 1;
         } else {
             printf("\n\n\t\tVALOR INVALIDO. TENTE DE NOVO!!\n");
