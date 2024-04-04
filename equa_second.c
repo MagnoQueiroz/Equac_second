@@ -46,7 +46,7 @@ int main() {
 
         printf("PRESS: ");
 //        scanf("%c", &answer);
-        fgets(answer,2,stdin );
+        fgets(answer, 2, stdin);
 
         if ((*answer == 'S') || (*answer == 's')) {
             printf("\n|---------------------------------|\n");
@@ -75,8 +75,7 @@ int main() {
 
             scanf("%c", &press);
             clear_screen();
-        }
-        else if ((*answer == 'n') || (*answer == 'N')) {
+        } else if ((*answer == 'n') || (*answer == 'N')) {
             scanf("%c", &press);
             clear_screen();
             printf("\n|────────────────────────────────────────────────────────|");
@@ -131,18 +130,15 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
     printf("|\t\t\t\t\tΔ = (%.0f)² - 4×%.0f×%.0f\t\t\t\t|\n", xnum, xqua, num);
     if (xNumPow >= 100) {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
-    }
-    else if (xNumPow == 0 || xqua == 0 || num == 0) {
+    } else if (xNumPow == 0 || xqua == 0 || num == 0) {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
-    }
-    else {
+    } else {
         printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
     }
     if (delta <= -10) {
         printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);
 
-    }
-    else {
+    } else {
         printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);
     }
     printf("|\t\t\t\t\t\t\t\t\t\t\t|");
@@ -171,7 +167,8 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("|\t\t\t\t   -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t  2×%.0f\t\t\t\t\t\t|\n",
                xnum, delta, xqua);
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
-        printf("|\t\t\t\t    -(%.2f) +- %.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t    %.0f\t\t\t\t\t\t|",xnum, raiz, (2 * xqua));
+        printf("|\t\t\t\t    -(%.2f) +- %.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t    %.0f\t\t\t\t\t\t|",
+               xnum, raiz, (2 * xqua));
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
         printf("\n|---------------------------------------------------------------------------------------|\n");
         printf("|\t\t\t\tRaízes|soluções possíveis:\t\t\t\t|");
@@ -179,8 +176,7 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|\n");
         if (raizesBask[0] == 0 && raizesBask[1] == 00) {
             printf("|\t\t\t\t\tX¹X²: %.2f\t\t\t\t\t|", raizesBask[0]);
-        }
-        else {
+        } else {
             printf("|\t\t\t\t\tX¹: %.2f\t\t\t\t\t|\n", raizesBask[0]);
             printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
         }
