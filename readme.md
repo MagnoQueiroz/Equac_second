@@ -1,4 +1,4 @@
-# Equação do segundo grau:
+# Equação do 2º:
 
 <div align="center">
 
