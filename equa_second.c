@@ -33,6 +33,7 @@ int main() {
     int repeat;
     char answer;
     float xQua, xNum, num;
+
     do {
         char press;
         printf("\n|────────────────────────────────────────────────────────|");
@@ -89,7 +90,6 @@ int main() {
             scanf("%c", &press);
             clear_screen();
         }
-
 
     } while (repeat == 0);
 
@@ -186,5 +186,4 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
 
     }
-
 }
