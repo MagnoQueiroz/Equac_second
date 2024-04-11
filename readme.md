@@ -4,6 +4,8 @@
 
 <img src="./images/iconHeader.png" width="500">
 
+<br>
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Static Badge](https://img.shields.io/badge/STATUS-CONCLUDED-GREEN)
 </div>
