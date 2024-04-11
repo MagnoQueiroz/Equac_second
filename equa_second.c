@@ -31,7 +31,7 @@ void processEquaAndWrite(float xqua, float xnum, float num);
 int main() {
     setlocale(LC_ALL, "portuguese");
     int repeat = 0;
-    char answer[3];
+    char answer;
     float xQua, xNum, num;
 
     while (repeat == 0) {
@@ -45,10 +45,9 @@ int main() {
         printf("\n|--------------------------------------------------------|\n");
 
         printf("PRESS: ");
-//        scanf("%c", &answer);
-        fgets(answer, 2, stdin);
+        scanf("%c", &answer);
 
-        if ((*answer == 'S') || (*answer == 's')) {
+        if ((answer == 'S') || (answer == 's')) {
             printf("\n|---------------------------------|\n");
             printf("|          Equação do 2º          |\n");
             printf("|---------------------------------|\n");

@@ -1,6 +1,15 @@
 # Equação do segundo grau:
+
+<div align="center">
+
+<img src="./images/iconHeader.png" width="500">
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Static Badge](https://img.shields.io/badge/STATUS-concluded-GREEN)
+</div>
+
 - Este algoritmo foi criado para calcular uma equação do segundo grau a partir de seu discriminante.
-- Há algumas variáveis supérfluas no código que só estão lá para facilitar meu entendimento de como cada parte funciona.
+- Há variáveis supérfluas no código que só estão lá para facilitar meu entendimento de como cada parte funciona.
 - Dito isto ignore qualquer erro, ou me notifique que realizarei a correção.
 
 ## Como funciona:
