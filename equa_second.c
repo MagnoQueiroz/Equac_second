@@ -30,11 +30,10 @@ void processEquaAndWrite(float xqua, float xnum, float num);
 
 int main() {
     setlocale(LC_ALL, "portuguese");
-    int repeat = 0;
+    int repeat;
     char answer;
     float xQua, xNum, num;
-
-    while (repeat == 0) {
+    do {
         char press;
         printf("\n|────────────────────────────────────────────────────────|");
         printf("\n|\t\t\tBEM-VINDO !!\t\t\t |");
@@ -74,7 +73,7 @@ int main() {
 
             scanf("%c", &press);
             clear_screen();
-        } else if ((*answer == 'n') || (*answer == 'N')) {
+        } else if ((answer == 'n') || (answer == 'N')) {
             scanf("%c", &press);
             clear_screen();
             printf("\n|────────────────────────────────────────────────────────|");
@@ -91,7 +90,9 @@ int main() {
             clear_screen();
         }
 
-    }
+
+    } while (repeat == 0);
+
     return (0);
 }
 
@@ -160,8 +161,7 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|");
 
         printf("\n|---------------------------------------------------------------------------------------|\n");
-    }
-    else {
+    } else {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
         printf("|\t\t\t\t   -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t  2×%.0f\t\t\t\t\t\t|\n",
                xnum, delta, xqua);
