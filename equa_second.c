@@ -20,6 +20,7 @@ void clear_screen() {
     system("cls");
 #else
 #endif
+
 }
 
 float calcdelta(float xqua, float xNumPow, float num);
@@ -187,6 +188,5 @@ void processEquaAndWrite(float xqua, float xnum, float num) {
         printf("|\t\t\t\t   developed by Synxther©\t\t\t\t|\n");
         printf("|\t\t\t    GITHUB:https://github.com/MagnoQueiroz\t\t\t|");
         printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
-
     }
 }
