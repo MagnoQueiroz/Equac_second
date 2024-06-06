@@ -1,16 +1,15 @@
 #include <stdio.h>
+//#include <string.h>
 #include <locale.h>
 #include <math.h>
 
 #ifdef __linux__
-
 #include <stdlib.h>
-
 #elif _WIN32
 #include <windows.h>
 #else
 #endif
-
+    
 void clear_screen() {
     printf("\n\n[PRESS ENTER] OU QUALQUER TECLA PARA CONTINUAR O PROCEDIMENTO...");
     char press = getchar();
@@ -34,8 +33,8 @@ int main() {
     int repeat;
     char answer;
     float xQua, xNum, num;
+    //char resp[] = {"sim", "nao"};
 
-    do {
         char press;
         printf("\n|────────────────────────────────────────────────────────|");
         printf("\n|\t\t\tBEM-VINDO !!\t\t\t |");

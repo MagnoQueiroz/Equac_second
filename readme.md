@@ -20,8 +20,12 @@
 ## Como compilar:
 - Para poder executar o script, você terá que usar o parametro -lm na hora da compilação.
 ```
-    ggc -o nomearquivocompilar nomedoarquivo.c -lm
- ```  
+ggc -o nomearquivocompilar nomedoarquivo.c -lm    
+```  
+ou:
+```
+gcc -o nomearquivo.c -c arquviocompilar
+```
 ## Imagens:
 <div align="center">
 
