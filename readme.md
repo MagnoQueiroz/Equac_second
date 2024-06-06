@@ -18,7 +18,7 @@
 - O usuário digita quais sao os números presentes na operação. Em seguida ele realiza o cálculo, imprimindo em tela o resultado.
 
 ## Como compilar:
-- Para poder executar o script, você terá que usar o parametro -lm na hora da compilação.
+- Para poder executar o script, você terá que usar o parâmetro -lm na hora da compilação.
 ```
 ggc -o nomearquivocompilar nomedoarquivo.c -lm    
 ```  
