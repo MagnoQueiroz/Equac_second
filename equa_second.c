@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <locale.h>
 #include <math.h>
+#include <ctype.h>
+
 // #include <string.h>
 //?? Is there a way to set null values in variables that are not pointers?
-#define DEFAULT_VALUE 0
+#define DEFAULT_NULL_VALUE 0
 
 #ifdef __linux__
 #include <stdlib.h>
@@ -23,13 +25,12 @@ void clear_screen()
 #else
 #endif
 }
+
 void welcomeScreen();
 void executeEquation();
-float calcdelta(float xqua, float xNumPow, float num);
-
-float *calcbask(float raiz, float xqua, float xnum);
-
-void EquaWrite(float xqua, float xnum, float num);
+float calculateDelta(float xQuadratic, float xNumberPow, float num);
+float *calculateBhaskara(float raiz, float xQuadratic, float xNumElevateToOne);
+void EquationWrite(float xQuadratic, float xNumElevateToOne, float num);
 int main()
 {
     setlocale(LC_ALL, "portuguese");
@@ -39,7 +40,7 @@ int main()
 
 void welcomeScreen()
 {
-    int repeat = DEFAULT_VALUE;
+    int repeat = DEFAULT_NULL_VALUE;
     char answer;
     do
     {
@@ -54,12 +55,12 @@ void welcomeScreen()
 
         printf("PRESS: ");
         scanf("%c", &answer);
-
-        if ((answer == 'S') || (answer == 's'))
+        answer= tolower(answer);
+        if (answer == 's')
         {
             executeEquation();
         }
-        else if ((answer == 'n') || (answer == 'N'))
+        else if (answer == 'n')
         {
             scanf("%c", &press);
             clear_screen();
@@ -85,39 +86,39 @@ void welcomeScreen()
     } while (repeat == 0);
 }
 
-float calcdelta(float xqua, float xNumPow, float num)
+float calculateDelta(float xQuadratic, float xNumberPow, float num)
 {
-    float delta = xNumPow - (4 * (xqua * num));
+    float delta = xNumberPow - (4 * (xQuadratic * num));
     return (delta);
 }
 
-// this function is a pointer to returned a vector xone xtwo
-float *calcbask(float raiz, float xqua, float xnum)
+// this function is a pointer to returned a vector xOne xTwo
+float *calculateBhaskara(float raiz, float xQuadratic, float xNumElevateToOne)
 {
     /**
-     * Poderia passar apenas parâmetros com ponteiros *xone e *xtwo pegando apenas o endereço das variáveis. Porem optei por essa opção
+     * Poderia passar apenas parâmetros com ponteiros *xOne e *xTwo pegando apenas o endereço das variáveis. Porem optei por essa opção
      */
     float xOne, xTwo;
-    //// static float vetorValores[2];
-    float *vetorValores = (float *)malloc(2 * sizeof(float));
-    if (vetorValores == NULL)
+    //// static float vectorValues[2];
+    float *vectorValues = (float *)malloc(2 * sizeof(float));
+    if (vectorValues == NULL)
     {
         printf("ERROR: FALHA AO ALOCAR MEMORIA");
         exit(1);
     }
 
-    xOne = (-xnum + raiz) / (2 * xqua);
-    xTwo = (-xnum - raiz) / (2 * xqua);
+    xOne = (-xNumElevateToOne + raiz) / (2 * xQuadratic);
+    xTwo = (-xNumElevateToOne - raiz) / (2 * xQuadratic);
 
-    vetorValores[0] = xOne;
-    vetorValores[1] = xTwo;
+    vectorValues[0] = xOne;
+    vectorValues[1] = xTwo;
 
-    return (vetorValores);
+    return (vectorValues);
 }
 
 void executeEquation()
 {
-    float xQua = DEFAULT_VALUE, xNum = DEFAULT_VALUE, num = DEFAULT_VALUE;
+    float xQuadratic = DEFAULT_NULL_VALUE, xNumElevateToOne = DEFAULT_NULL_VALUE, num = DEFAULT_NULL_VALUE;
     char press;
     printf("\n|---------------------------------|\n");
     printf("|          Equação do 2º          |\n");
@@ -128,60 +129,60 @@ void executeEquation()
     do
     {
         printf(" Digite a: ");
-        scanf("%f", &xQua);
+        scanf("%f", &xQuadratic);
 
-        if (xQua == 0)
+        if (xQuadratic == 0)
         {
             printf("Ax não pode ser zero. Digite um valor valido\n");
         }
 
-    } while (xQua == 0);
+    } while (xQuadratic == 0);
 
     printf(" Digite b: ");
-    scanf("%f", &xNum);
+    scanf("%f", &xNumElevateToOne);
 
     printf(" Digite c: ");
     scanf("%f", &num);
 
-    EquaWrite(xQua, xNum, num);
+    EquationWrite(xQuadratic, xNumElevateToOne, num);
 
     scanf("%c", &press);
     clear_screen();
 }
 
-void EquaWrite(float xqua, float xnum, float num)
+void EquationWrite(float xQuadratic, float xNumElevateToOne, float num)
 {
-    float raiz, xNumPow = pow(xnum, 2);
+    float raiz, xNumberPow = pow(xNumElevateToOne, 2);
     float delta;
     float *raizesBask;
-    delta = calcdelta(xqua, xNumPow, num);
+    delta = calculateDelta(xQuadratic, xNumberPow, num);
     raiz = sqrt(delta);
 
-    raizesBask = calcbask(raiz, xqua, xnum);
+    raizesBask = calculateBhaskara(raiz, xQuadratic, xNumElevateToOne);
     printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
     printf("|\t\t\t\t\tΔ DELTA:\t\t\t\t\t|");
     printf("\n|---------------------------------------------------------------------------------------|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t\t\tΔ = (b)² - 4×a×c\t\t\t\t|\n");
 
-    printf("|\t\t\t\t\tΔ = (%.0f)² - 4×%.0f×%.0f\t\t\t\t|\n", xnum, xqua, num);
-    if (xNumPow >= 100)
+    printf("|\t\t\t\t\tΔ = (%.0f)² - 4×%.0f×%.0f\t\t\t\t|\n", xNumElevateToOne, xQuadratic, num);
+    if (xNumberPow >= 100)
     {
-        printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
+        printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumberPow, xQuadratic, num);
     }
-    else if (xNumPow == 0 || xqua == 0 || num == 0)
+    else if (xNumberPow == 0 || xQuadratic == 0 || num == 0)
     {
-        printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
+        printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumberPow, xQuadratic, num);
     }
     else
     {
-        if (xqua < 0 || num < 0)
+        if (xQuadratic < 0 || num < 0)
         {
-            printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumPow, xqua, num);
+            printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t|\n", xNumberPow, xQuadratic, num);
         }
         else
         {
-            printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t\t|\n", xNumPow, xqua, num);
+            printf("|\t\t\t\t\tΔ = (%.0f) - 4×%.0f×%.0f\t\t\t\t\t|\n", xNumberPow, xQuadratic, num);
         }
     }
     if (delta <= -1004)
@@ -213,7 +214,7 @@ void EquaWrite(float xqua, float xnum, float num)
         printf("|→ Logo Não é possível passar deste ponto:\t\t\t\t\t\t|");
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
         printf("\n|\t\t\t\t    -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t________________________________\t\t\t|\n|\t\t\t\t\t     %.0f\t\t\t\t\t\t|\n",
-               xnum, delta, (2 * xqua));
+               xNumElevateToOne, delta, (2 * xQuadratic));
         printf("|\t\t\t\t\t\t\t\t\t\t\t|");
 
         printf("\n|---------------------------------------------------------------------------------------|\n");
@@ -222,10 +223,10 @@ void EquaWrite(float xqua, float xnum, float num)
     {
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
         printf("|\t\t\t\t   -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t  2×%.0f\t\t\t\t\t\t|\n",
-               xnum, delta, xqua);
+               xNumElevateToOne, delta, xQuadratic);
         printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
         printf("|\t\t\t\t    -(%.2f) +- %.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t    %.0f\t\t\t\t\t\t|",
-               xnum, raiz, (2 * xqua));
+               xNumElevateToOne, raiz, (2 * xQuadratic));
         printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
         printf("\n|---------------------------------------------------------------------------------------|\n");
         printf("|\t\t\t\tRaízes|soluções possíveis:\t\t\t\t|");
@@ -241,12 +242,15 @@ void EquaWrite(float xqua, float xnum, float num)
             printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
         }
     }
-    printf("|\t\t\t\t\t\t\t\t\t\t\t|");
+
     printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
-    printf("|\t\t\t\t   developed by SYNXTHER©\t\t\t\t|\n");
+    printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t    GITHUB:https://github.com/MagnoQueiroz\t\t\t|");
     printf("\n|\t\t     REPO:https://github.com/MagnoQueiroz/equac_second\t\t\t|");
+    printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
 
+    printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
+    printf("|\t\t\t\t   developed by SYNXTHER©\t\t\t\t|");
     printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
     printf("\n");
 }
