@@ -32,7 +32,7 @@ float calculateDelta(float axQuadratic, float bxNumberPow, float cxNumberElevate
 float *calculateBhaskara(float raiz, float axQuadratic, float bxNumElevateToOne);
 void EquationWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero);
 void complexRootSquare(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero, float delta);
-void bhaskaraRootSquareWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero, float delta, float raiz);
+void bhaskaraRootSquareWrite(float axQuadratic, float bxNumElevateToOne, float delta, float raiz);
 void returnRootsXOneXTwo(float raiz, float axQuadratic, float bxNumElevateToOne);
 void creditsCreator();
 int main()
@@ -59,7 +59,7 @@ void welcomeScreen()
 
         printf("PRESS: ");
         scanf("%c", &answer);
-        answer= tolower(answer);
+        answer = tolower(answer);
         if (answer == 's')
         {
             executeEquation();
@@ -228,7 +228,7 @@ void complexRootSquare(float axQuadratic, float bxNumElevateToOne, float cxNumbe
     printf("\n|---------------------------------------------------------------------------------------|\n");
 }
 
-void bhaskaraRootSquareWrite(float axQuadratic, float bxNumElevateToOne, float num, float delta, float raiz )
+void bhaskaraRootSquareWrite(float axQuadratic, float bxNumElevateToOne, float delta, float raiz)
 {
     printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t\t   -(%.2f) +- √%.2f\t\t\t\t\t|\n|\t\t\t\t  ___________________\t\t\t\t\t|\n|\t\t\t\t\t  2×%.0f\t\t\t\t\t\t|\n",
@@ -242,10 +242,10 @@ void bhaskaraRootSquareWrite(float axQuadratic, float bxNumElevateToOne, float n
     returnRootsXOneXTwo(raiz, axQuadratic, bxNumElevateToOne);
     printf("\n|---------------------------------------------------------------------------------------|");
     printf("\n|\t\t\t\t\t\t\t\t\t\t\t|\n");
-
 }
 
-void returnRootsXOneXTwo(float raiz, float axQuadratic, float bxNumElevateToOne) {
+void returnRootsXOneXTwo(float raiz, float axQuadratic, float bxNumElevateToOne)
+{
     // criaçao de ponteiro para receber vetor
     float *raizesBask;
     // os locais de memoria sao armazenados no ponteiro veja se eu adicionasse * estaria criando um ponteiro de ponteiro. Quando na vdd quero apenas os endereços de memoria. isso ocorre pq parecido com o ponteiro o vetor é um endereço para o primeiro index.
@@ -260,10 +260,10 @@ void returnRootsXOneXTwo(float raiz, float axQuadratic, float bxNumElevateToOne)
         printf("\n|\t\t\t\t\tX¹: %.2f\t\t\t\t\t|\n", raizesBask[0]);
         printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
     }
-
 }
 
-void creditsCreator() {
+void creditsCreator()
+{
     printf("|───────────────────────────────────────────────────────────────────────────────────────|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t      GITHUB:https://github.com/MagnoQueiroz\t\t\t|");
