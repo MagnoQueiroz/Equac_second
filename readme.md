@@ -8,7 +8,6 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Static Badge](https://img.shields.io/badge/Version-0.95-orange)
-
 ![Static Badge](https://img.shields.io/badge/STATUS-PROGRESS-yellow)
 
 </div>
