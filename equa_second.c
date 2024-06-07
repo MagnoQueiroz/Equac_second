@@ -67,6 +67,8 @@ void welcomeScreen()
             printf("\n|--------------------------------------------------------|\n");
             printf("|\t\t  developed by Synxther©\t\t |\n");
             printf("|\t GITHUB:https://github.com/MagnoQueiroz\t\t |");
+            printf("\n|    REPO:https://github.com/MagnoQueiroz/equac_second\t |");
+
             printf("\n|────────────────────────────────────────────────────────|");
             printf("\n");
             repeat = 1;
@@ -74,8 +76,7 @@ void welcomeScreen()
         else
         {
             printf("\n\n\t\tVALOR INVALIDO. TENTE DE NOVO!!\n");
-             scanf("%c", &press);
-
+            scanf("%c", &press);
             clear_screen();
         }
 
