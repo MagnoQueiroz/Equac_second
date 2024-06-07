@@ -8,7 +8,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![version](https://img.shields.io/badge/Version-0.95-orange)
-![Static Badge](https://img.shields.io/badge/STATUS-CONCLUDED-yellow)
+![Static Badge](https://img.shields.io/badge/STATUS-PROGRESS-yellow)
 </div>
 
 - Este algoritmo foi criado para calcular uma equação do segundo grau a partir de seu discriminante.
