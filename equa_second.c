@@ -1,7 +1,9 @@
 #include <stdio.h>
-// #include <string.h>
 #include <locale.h>
 #include <math.h>
+// #include <string.h>
+//?? Is there a way to set null values in variables that are not pointers?
+#define DEFAULT_VALUE 0
 
 #ifdef __linux__
 #include <stdlib.h>
@@ -37,7 +39,7 @@ int main()
 
 void welcomeScreen()
 {
-    int repeat = 0;
+    int repeat = DEFAULT_VALUE;
     char answer;
     do
     {
@@ -115,7 +117,7 @@ float *calcbask(float raiz, float xqua, float xnum)
 
 void executeEquation()
 {
-    float xQua, xNum, num;
+    float xQua = DEFAULT_VALUE, xNum = DEFAULT_VALUE, num = DEFAULT_VALUE;
     char press;
     printf("\n|---------------------------------|\n");
     printf("|          Equação do 2º          |\n");
@@ -238,11 +240,13 @@ void EquaWrite(float xqua, float xnum, float num)
             printf("|\t\t\t\t\tX¹: %.2f\t\t\t\t\t|\n", raizesBask[0]);
             printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
         }
-        printf("\n|\t\t\t\t\t\t\t\t\t\t\t|");
-        printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
-        printf("|\t\t\t\t   developed by SYNXTHER©\t\t\t\t|\n");
-        printf("|\t\t\t    GITHUB:https://github.com/MagnoQueiroz\t\t\t|");
-        printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
-        printf("\n");
     }
+    printf("|\t\t\t\t\t\t\t\t\t\t\t|");
+    printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
+    printf("|\t\t\t\t   developed by SYNXTHER©\t\t\t\t|\n");
+    printf("|\t\t\t    GITHUB:https://github.com/MagnoQueiroz\t\t\t|");
+    printf("\n|\t\t     REPO:https://github.com/MagnoQueiroz/equac_second\t\t\t|");
+
+    printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
+    printf("\n");
 }
