@@ -5,7 +5,7 @@
 
 // #include <string.h>
 //?? Is there a way to set null values in variables that are not pointers?
-#define DEFAULT_NULL_VALUE 0
+#define INITIAL_VALUE_FOR_CALCULABLE_NUMBER 0
 
 #ifdef __linux__
 #include <stdlib.h>
@@ -40,7 +40,7 @@ int main()
 
 void welcomeScreen()
 {
-    int repeat = DEFAULT_NULL_VALUE;
+    int repeat = INITIAL_VALUE_FOR_CALCULABLE_NUMBER;
     char answer;
     do
     {
@@ -118,7 +118,7 @@ float *calculateBhaskara(float raiz, float xQuadratic, float xNumElevateToOne)
 
 void executeEquation()
 {
-    float xQuadratic = DEFAULT_NULL_VALUE, xNumElevateToOne = DEFAULT_NULL_VALUE, num = DEFAULT_NULL_VALUE;
+    float xQuadratic = INITIAL_VALUE_FOR_CALCULABLE_NUMBER, xNumElevateToOne = INITIAL_VALUE_FOR_CALCULABLE_NUMBER, num = INITIAL_VALUE_FOR_CALCULABLE_NUMBER;
     char press;
     printf("\n|---------------------------------|\n");
     printf("|          Equação do 2º          |\n");
