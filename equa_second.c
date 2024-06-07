@@ -208,7 +208,7 @@ void EquationWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberEle
     }
     else
     {
-        bhaskaraRootSquareWrite(axQuadratic, bxNumElevateToOne, cxNumberElevateZero, delta, raiz);
+        bhaskaraRootSquareWrite(axQuadratic, bxNumElevateToOne, delta, raiz);
     }
 
     creditsCreator();
