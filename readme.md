@@ -1,4 +1,4 @@
-# Equação do 2º:        
+# Equação do 2º:
 
 <div align="center">
 
@@ -7,7 +7,8 @@
 <br>
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Static Badge](https://img.shields.io/badge/STATUS-CONCLUDED-GREEN)
+![version](https://img.shields.io/badge/Version-0.95-orange)
+![Static Badge](https://img.shields.io/badge/STATUS-CONCLUDED-yellow)
 </div>
 
 - Este algoritmo foi criado para calcular uma equação do segundo grau a partir de seu discriminante.
@@ -20,8 +21,8 @@
 ## Como compilar:
 - Para poder executar o script, você terá que usar o parâmetro -lm na hora da compilação.
 ```
-ggc -o nomearquivocompilar nomedoarquivo.c -lm    
-```  
+ggc -o nomearquivocompilar nomedoarquivo.c -lm
+```
 ou:
 ```
 gcc -o nomearquivo.c -c arquviocompilar
