@@ -1,9 +1,5 @@
 # Equação do 2º:
 
-# EM MANUTENÇÃO
-
-- Olá antes de mais nada queria pedir desculpas, pois nesse momento o codigo pode está passando por alguns ajustes oq causará instabilidade em sua forma de execução e etc. Por isso peço que aguarde até o termino de sua manutençao e reformulação.
-
 <div align="center">
 
 <img src="./images/iconHeader.png" width="500">
@@ -13,6 +9,11 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![version](https://img.shields.io/badge/Version-0.95-orange)
 ![Static Badge](https://img.shields.io/badge/STATUS-PROGRESS-yellow)
+=======
+![Static Badge](https://img.shields.io/badge/Version-0.95-orange)
+![Static Badge](https://img.shields.io/badge/STATUS-PROGRESS-yellow)
+
+>>>>>>> developer
 </div>
 
 - Este algoritmo foi criado para calcular uma equação do segundo grau a partir de seu discriminante.
@@ -25,11 +26,11 @@
 ## Como compilar:
 - Para poder executar o script, você terá que usar o parâmetro -lm na hora da compilação.
 ```
-ggc -o nomearquivocompilar nomedoarquivo.c -lm
+gcc -o equac_second main.c ./src/functionClearScreen.c ./src/functionWelcomeAndEndScreen.c ./src/functionWriteEquationSecond.c ./src/functionTypeOfNumbersEquac.c -lm
 ```
 ou:
 ```
-gcc -o nomearquivo.c -c arquviocompilar
+gcc -o gcc -o equac_second main.c ./src/functionClearScreen.c ./src/functionWelcomeAndEndScreen.c ./src/functionWriteEquationSecond.c ./src/functionTypeOfNumbersEquac.c -lm -c arquviocompilar
 ```
 ## Imagens:
 <div align="center">
