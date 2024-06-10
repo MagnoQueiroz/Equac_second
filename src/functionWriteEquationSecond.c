@@ -30,47 +30,8 @@ float *calculateBhaskara(float raiz, float axQuadratic, float bxNumElevateToOne)
     return (vectorValues);
 }
 
-void executeEquation()
+void writeDelta(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero, float bxNumberPow, float delta)
 {
-    float axQuadratic = INITIAL_VALUE_FOR_CALCULABLE_NUMBER, bxNumElevateToOne = INITIAL_VALUE_FOR_CALCULABLE_NUMBER, cxNumberElevateZero = INITIAL_VALUE_FOR_CALCULABLE_NUMBER;
-    char press;
-    printf("\n|---------------------------------|\n");
-    printf("|          Equação do 2º          |\n");
-    printf("|---------------------------------|\n");
-    printf("|\t ax² + bx + c = 0\t  |\n");
-    printf("|---------------------------------|\n");
-
-    do
-    {
-        printf(" Digite a: ");
-        scanf("%f", &axQuadratic);
-
-        if (axQuadratic == 0)
-        {
-            printf("Ax não pode ser zero. Digite um valor valido\n");
-        }
-
-    } while (axQuadratic == 0);
-
-    printf(" Digite b: ");
-    scanf("%f", &bxNumElevateToOne);
-
-    printf(" Digite c: ");
-    scanf("%f", &cxNumberElevateZero);
-
-    EquationWrite(axQuadratic, bxNumElevateToOne, cxNumberElevateZero);
-
-    scanf("%c", &press);
-    clear_screen();
-}
-
-void EquationWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero)
-{
-    float raiz, bxNumberPow = pow(bxNumElevateToOne, 2);
-    float delta;
-    delta = calculateDelta(axQuadratic, bxNumberPow, cxNumberElevateZero);
-    raiz = sqrt(delta);
-
     printf("\n|───────────────────────────────────────────────────────────────────────────────────────|\n");
     printf("|\t\t\t\t\tΔ DELTA:\t\t\t\t\t|");
     printf("\n|---------------------------------------------------------------------------------------|\n");
@@ -110,6 +71,15 @@ void EquationWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberEle
         printf("|\t\t\t\t\tΔ = %.0f\t\t\t\t\t\t|\n", delta);
     }
     printf("|\t\t\t\t\t\t\t\t\t\t\t|");
+}
+void EquationWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero)
+{
+    float raiz, bxNumberPow = pow(bxNumElevateToOne, 2);
+    float delta;
+    delta = calculateDelta(axQuadratic, bxNumberPow, cxNumberElevateZero);
+    raiz = sqrt(delta);
+
+    writeDelta(axQuadratic, bxNumElevateToOne, cxNumberElevateZero, bxNumberPow,delta);
 
     printf("\n|---------------------------------------------------------------------------------------|\n");
     printf("|\t\t\t\t\tBHASKARA:\t\t\t\t\t|");
@@ -177,3 +147,4 @@ void returnRootsXOneXTwo(float raiz, float axQuadratic, float bxNumElevateToOne)
         printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
     }
 }
+

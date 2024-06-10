@@ -16,6 +16,7 @@ void clear_screen();
 void welcomeScreen();
 void executeEquation();
 float calculateDelta(float axQuadratic, float bxNumberPow, float cxNumberElevateZero);
+void writeDelta(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero, float bxNumberPow, float delta);
 float *calculateBhaskara(float raiz, float axQuadratic, float bxNumElevateToOne);
 void EquationWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero);
 void complexRootSquare(float axQuadratic, float bxNumElevateToOne, float cxNumberElevateZero, float delta);
