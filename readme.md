@@ -22,7 +22,7 @@
 ## Como compilar:
 - Para poder executar o script, você terá que usar o parâmetro -lm na hora da compilação.
 ```
-ggc -o nomearquivocompilar nomedoarquivo.c -lm
+gcc -o ./output/equac_second main.c ./src/clear_screen.c ./src/equationSecond.c ./src/functionWelcomeAndEndScreen.c  -lm
 ```
 ou:
 ```
