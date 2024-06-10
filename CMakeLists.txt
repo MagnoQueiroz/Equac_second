@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28)
 
-project(equac_second VERSION 0.95 DESCRIPTION "script to generate quadratic equations" LANGUAGES C)
+project(equac_second VERSION 1.0 DESCRIPTION "script to generate quadratic equations" LANGUAGES C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c99")
