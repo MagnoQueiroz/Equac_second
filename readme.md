@@ -1,5 +1,9 @@
 # Equação do 2º:
 
+# EM MANUTENÇÃO
+
+- Olá antes de mais nada queria pedir desculpas, pois nesse momento o codigo pode está passando por alguns ajustes oq causará instabilidade em sua forma de execução e etc. Por isso peço que aguarde até o termino de sua manutençao e reformulação.
+
 <div align="center">
 
 <img src="./images/iconHeader.png" width="500">
