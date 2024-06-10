@@ -22,11 +22,11 @@
 ## Como compilar:
 - Para poder executar o script, você terá que usar o parâmetro -lm na hora da compilação.
 ```
-gcc -o ./output/equac_second main.c ./src/clear_screen.c ./src/equationSecond.c ./src/functionWelcomeAndEndScreen.c  -lm
+gcc -o equac_second main.c ./src/functionClearScreen.c ./src/functionWelcomeAndEndScreen.c ./src/functionWriteEquationSecond.c ./src/functionTypeOfNumbersEquac.c -lm
 ```
 ou:
 ```
-gcc -o nomearquivo.c -c arquviocompilar
+gcc -o gcc -o equac_second main.c ./src/functionClearScreen.c ./src/functionWelcomeAndEndScreen.c ./src/functionWriteEquationSecond.c ./src/functionTypeOfNumbersEquac.c -lm -c arquviocompilar
 ```
 ## Imagens:
 <div align="center">
