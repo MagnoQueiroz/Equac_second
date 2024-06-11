@@ -79,7 +79,7 @@ void EquationWrite(float axQuadratic, float bxNumElevateToOne, float cxNumberEle
     delta = calculateDelta(axQuadratic, bxNumberPow, cxNumberElevateZero);
     raiz = sqrt(delta);
 
-    writeDelta(axQuadratic, bxNumElevateToOne, cxNumberElevateZero, bxNumberPow,delta);
+    writeDelta(axQuadratic, bxNumElevateToOne, cxNumberElevateZero, bxNumberPow, delta);
 
     printf("\n|---------------------------------------------------------------------------------------|\n");
     printf("|\t\t\t\t\tBHASKARA:\t\t\t\t\t|");
@@ -147,4 +147,3 @@ void returnRootsXOneXTwo(float raiz, float axQuadratic, float bxNumElevateToOne)
         printf("|\t\t\t\t\tX²: %.2f\t\t\t\t\t|", raizesBask[1]);
     }
 }
-

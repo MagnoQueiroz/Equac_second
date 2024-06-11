@@ -2,7 +2,7 @@
 #include <locale.h>
 #include <math.h>
 #include <ctype.h>
-#include <stdio.h>
+
 #ifdef __linux__
 #include <stdlib.h>
 #elif _WIN32
